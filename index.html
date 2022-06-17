@@ -24,8 +24,9 @@
   <body>
     <div id="app">
       <div class="container pt-4 text-center">
+        <button class="btn bg-yellow" @click="generate10Emails()">Genera lista Email</button>
         <ul>
-          <li v-for="Email in listaEmail">{{generate10Emails(Email)}}</li>
+          <li v-for="Email in listaEmail" v-if="listaEmail.length === 10">{{Email}}</li>
         </ul>
       </div>
     </div>
